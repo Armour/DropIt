@@ -23,7 +23,7 @@
 
 @implementation ViewController
 
-static const CGSize DROP_SIZE = {25, 25};
+static const CGSize DROP_SIZE = {42, 42};
 
 - (IBAction)tap:(UITapGestureRecognizer *)sender {
     [self drop];
