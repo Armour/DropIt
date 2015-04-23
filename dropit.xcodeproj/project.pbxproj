@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		767693481AE8B89B0098A8E8 /* BezierPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 767693471AE8B89A0098A8E8 /* BezierPathView.m */; };
 		76E466D71AE7DC1600046628 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E466D61AE7DC1600046628 /* main.m */; };
 		76E466DA1AE7DC1600046628 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E466D91AE7DC1600046628 /* AppDelegate.m */; };
 		76E466DD1AE7DC1600046628 /* dropit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76E466DB1AE7DC1600046628 /* dropit.xcdatamodeld */; };
@@ -15,6 +16,7 @@
 		76E466E51AE7DC1600046628 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E466E41AE7DC1600046628 /* Images.xcassets */; };
 		76E466E81AE7DC1600046628 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76E466E61AE7DC1600046628 /* LaunchScreen.xib */; };
 		76E466F41AE7DC1600046628 /* dropitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E466F31AE7DC1600046628 /* dropitTests.m */; };
+		76E466FF1AE7E72900046628 /* DropitBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E466FE1AE7E72900046628 /* DropitBehavior.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		767693461AE8B89A0098A8E8 /* BezierPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierPathView.h; sourceTree = "<group>"; };
+		767693471AE8B89A0098A8E8 /* BezierPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierPathView.m; sourceTree = "<group>"; };
 		76E466D11AE7DC1600046628 /* dropit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dropit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E466D51AE7DC1600046628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E466D61AE7DC1600046628 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		76E466ED1AE7DC1600046628 /* dropitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dropitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E466F21AE7DC1600046628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E466F31AE7DC1600046628 /* dropitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dropitTests.m; sourceTree = "<group>"; };
+		76E466FD1AE7E72900046628 /* DropitBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropitBehavior.h; sourceTree = "<group>"; };
+		76E466FE1AE7E72900046628 /* DropitBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropitBehavior.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +89,14 @@
 		76E466D31AE7DC1600046628 /* dropit */ = {
 			isa = PBXGroup;
 			children = (
-				76E466D81AE7DC1600046628 /* AppDelegate.h */,
-				76E466D91AE7DC1600046628 /* AppDelegate.m */,
 				76E466DE1AE7DC1600046628 /* ViewController.h */,
 				76E466DF1AE7DC1600046628 /* ViewController.m */,
+				767693461AE8B89A0098A8E8 /* BezierPathView.h */,
+				767693471AE8B89A0098A8E8 /* BezierPathView.m */,
 				76E466E11AE7DC1600046628 /* Main.storyboard */,
+				76E466FD1AE7E72900046628 /* DropitBehavior.h */,
+				76E466FE1AE7E72900046628 /* DropitBehavior.m */,
 				76E466E41AE7DC1600046628 /* Images.xcassets */,
-				76E466E61AE7DC1600046628 /* LaunchScreen.xib */,
-				76E466DB1AE7DC1600046628 /* dropit.xcdatamodeld */,
 				76E466D41AE7DC1600046628 /* Supporting Files */,
 			);
 			path = dropit;
@@ -99,6 +105,10 @@
 		76E466D41AE7DC1600046628 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76E466D81AE7DC1600046628 /* AppDelegate.h */,
+				76E466D91AE7DC1600046628 /* AppDelegate.m */,
+				76E466E61AE7DC1600046628 /* LaunchScreen.xib */,
+				76E466DB1AE7DC1600046628 /* dropit.xcdatamodeld */,
 				76E466D51AE7DC1600046628 /* Info.plist */,
 				76E466D61AE7DC1600046628 /* main.m */,
 			);
@@ -223,8 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E466DA1AE7DC1600046628 /* AppDelegate.m in Sources */,
+				76E466FF1AE7E72900046628 /* DropitBehavior.m in Sources */,
 				76E466D71AE7DC1600046628 /* main.m in Sources */,
 				76E466E01AE7DC1600046628 /* ViewController.m in Sources */,
+				767693481AE8B89B0098A8E8 /* BezierPathView.m in Sources */,
 				76E466DD1AE7DC1600046628 /* dropit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = dropit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = dropit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +430,7 @@
 				76E466F91AE7DC1600046628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76E466FA1AE7DC1600046628 /* Build configuration list for PBXNativeTarget "dropitTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +439,7 @@
 				76E466FC1AE7DC1600046628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
