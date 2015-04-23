@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 #import "DropitBehavior.h"
+#import "BezierPathView.h"
 
 @interface ViewController () <UIDynamicAnimatorDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *gameView;
+@property (weak, nonatomic) IBOutlet BezierPathView *gameView;
 @property (strong, nonatomic) UIDynamicAnimator *animator;
 //@property (strong, nonatomic) UIGravityBehavior *gravity;
 //@property (strong, nonatomic) UICollisionBehavior *collider;
@@ -37,12 +38,21 @@ static const CGSize DROP_SIZE = {42, 42};
         self.attachment.anchorPoint = gesturePoint;
     } else if (sender.state == UIGestureRecognizerStateEnded) {
         [self.animator removeBehavior:self.attachment];
+        self.gameView.path = nil;
     }
 }
 
 - (void)attachDroppingViewToPoint:(CGPoint)anchorPoint {
     if (self.droppingView) {
         self.attachment = [[UIAttachmentBehavior alloc] initWithItem:self.droppingView attachedToAnchor:anchorPoint];
+        UIView *droppingView = self.droppingView;
+        __weak ViewController *weakSelf = self;
+        self.attachment.action = ^{
+            UIBezierPath *path = [[UIBezierPath alloc] init];
+            [path moveToPoint:weakSelf.attachment.anchorPoint];
+            [path addLineToPoint:droppingView.center];
+            weakSelf.gameView.path = path;
+        };
         self.droppingView = nil;
         [self.animator addBehavior:self.attachment];
     }
