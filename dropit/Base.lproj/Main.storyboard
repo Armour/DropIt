@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-au-RXY" customClass="BezierPathView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-au-RXY" customClass="BezierPathView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -27,6 +27,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vCr-au-RXY" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="CSg-Hv-q40"/>
+                            <constraint firstItem="vCr-au-RXY" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Ubm-TB-F2R"/>
+                            <constraint firstAttribute="trailing" secondItem="vCr-au-RXY" secondAttribute="trailing" id="eS8-1Y-Ecg"/>
+                            <constraint firstItem="vCr-au-RXY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vBX-hL-014"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
